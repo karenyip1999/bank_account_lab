@@ -69,8 +69,18 @@ public class BankAccount {
         this.balance = balance;
     }
 
+    //Deposit method
+    public void deposit(int amount)
+    {
+        balance = balance + amount;
+    }
 
-
+    //Withdrawal method
+    public void withdrawal(int amount)
+    {
+        balance = balance - amount;
+    }
+    
 
 
 

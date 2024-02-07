@@ -98,5 +98,24 @@ public class BankAccountTest {
         assertThat(result).isEqualTo(expectedAnswer);
     }
 
+    @Test
+    public void canReturnDeposit()
+    {
+        BankAccount bankaccount = new BankAccount("Karen", "Yip", "12/12/24", 0, 0);
+        int expectedAnswer = 100;
+        bankaccount.deposit(100);
+        int actual = bankaccount.getBalance();
+        assertThat(actual).isEqualTo(actual);
+    }
+
+    @Test
+    public void canReturnWithdrawl()
+    {
+        BankAccount bankaccount = new BankAccount("Karen", "Yip", "12/12/24", 0, 100);
+        int expectedAnswer = 50;
+        bankaccount.withdrawal(50);
+        int actual = bankaccount.getBalance();
+        assertThat(actual).isEqualTo(actual);
+    }
 
 }

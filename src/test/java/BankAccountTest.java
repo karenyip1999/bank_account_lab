@@ -105,7 +105,7 @@ public class BankAccountTest {
         int expectedAnswer = 100;
         bankaccount.deposit(100);
         int actual = bankaccount.getBalance();
-        assertThat(actual).isEqualTo(actual);
+        assertThat(actual).isEqualTo(expectedAnswer);
     }
 
     @Test
@@ -115,7 +115,17 @@ public class BankAccountTest {
         int expectedAnswer = 50;
         bankaccount.withdrawal(50);
         int actual = bankaccount.getBalance();
-        assertThat(actual).isEqualTo(actual);
+        assertThat(actual).isEqualTo(expectedAnswer);
     }
 
+
+    @Test
+    public void canReturnInterest()
+    {
+        BankAccount bankaccount = new BankAccount("Karen", "Yip", "12/12/24", 0, 100);
+        int expectedAnswer = 200;
+        bankaccount.interest();
+        int actual = bankaccount.getBalance();
+        assertThat(actual).isEqualTo(expectedAnswer);
+    }
 }

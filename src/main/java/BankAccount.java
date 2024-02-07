@@ -80,8 +80,13 @@ public class BankAccount {
     {
         balance = balance - amount;
     }
-    
 
+    //Interest
+    public void interest()
+    {
+        balance = balance * 2 ;
+
+    }
 
 
 

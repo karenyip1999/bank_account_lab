@@ -1,6 +1,3 @@
-//import org.junit.jupiter.api.Test;
-//import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-
 public class BankAccount {
     //Attributes
     private String firstName;
@@ -9,9 +6,13 @@ public class BankAccount {
     private int accountNumber = 0;
     private int balance = 0;
 
-    public BankAccount()
+    public BankAccount(String insertFirstName, String insertLastname, String insertDateOfBirth, int insertAccountNumber, int insertBalance)
     {
-
+        this.firstName = insertFirstName;
+        this.lastName = insertLastname;
+        this.dateOfBirth = insertDateOfBirth;
+        this.accountNumber = insertAccountNumber;
+        this.balance = insertBalance;
     }
 
     //GET first name
